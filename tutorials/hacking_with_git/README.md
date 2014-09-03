@@ -49,19 +49,20 @@ permission I went and tried out my idea. The process of committing with
 Mike's credentials was straight forward. First I modified the grade file in
 vim and then added the file with `git add grade`. The commit was made
 with `git commit --author="Mike Izbicki <mike@izbicki.me>" -m "Change
-grade"`. By using the `--author="Mike Izbicki <mike@izbicki.me>"` flag I 
-was able to override the author that git would credit for the commit.
-Instead of using the information in my `~/.gitconfig` file, git used 
-the author name and email address passed along the `--author` flag.
+grade"`. By using the `--author"` flag I was able to override the author
+that git would credit for the commit. Instead of using the information in
+my `~/.gitconfig` file, git used the author name and email address passed
+along the `--author` flag.
 
-My concern about pushing with my Github credentials were not an
-issue and all signs pointed to Mike have made the commit himself. You
-may be wondering why git even allows this to happen in the first place
-and the answer is simple. The person pushing new commits to a repository
-may not be the person who made the changes. In a team environment many
-people may commit code changes but for whatever reason one person may be
-the only one responsible for pushing the code. So what happens to be a
-Git feature helped my get extra credit in class.
+The only thing left to see was what would happen when I tried to push
+the new commits with my Github credentials. It turned out that pushing
+with my credential were not an issue and all signs pointed to Mike having
+modified the grade himself. You may be wondering why git even allows this
+to happen in the first place and the answer is simple. The person pushing
+new commits to a repository may not be the person who made the changes.
+In a team environment many people may commit code changes but for whatever
+reason one person may be the only one responsible for pushing the code.
+So what happens to be a Git feature helped my get extra credit in class.
 
 ## Using Git For Evil
 In the example above Mike happened to be a contributor to my repository
