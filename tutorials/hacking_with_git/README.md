@@ -1,10 +1,7 @@
 # Faking Git Commits
 
 ## Description
-Git is a feature rich distributed version control system. The built in
-git features have real world legitimate uses for writing software as
-individuals or in a group but in this writeup I'm gonna show how these
-features can be used to hack the grading system used in this course. 
+Git is a feature rich distributed version control system. 
 
 ## Hacking with Git
 My main motivation for finding a way to hack the my grade was the extra
@@ -29,7 +26,13 @@ Date:   Thu Aug 28 21:31:47 2014 -0700
 Looking at the example above we see that the author is identified by a
 name followed by an email address. How does git determine which email
 address to use? It uses the name and email address in your
-`~/.gitconfig` file which the user gets to set. Since the user gets to
+`~/.gitconfig` file which the user sets and looks something like:
+```
+[user]
+    name = Antoine Guerrero
+    email = asguerrero3@gmail.com
+```
+. Since the user gets to
 set which email is in the file and no validation ever takes place, there
 is no way of telling if your name and email address are actually your
 name and email address. With this in mind, lets look at how I used this
