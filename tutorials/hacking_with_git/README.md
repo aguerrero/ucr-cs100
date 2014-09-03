@@ -51,6 +51,9 @@ vim and then added the file with `git add grade`. The commit was made
 with `git commit --author="Mike Izbicki <mike@izbicki.me>" -m "Change
 grade"`. By using the `--author="Mike Izbicki <mike@izbicki.me>"` flag I 
 was able to override the author that git would credit for the commit.
+Instead of using the information in my `~/.gitconfig` file, git used 
+the author name and email address passed along the `--author` flag.
+
 My concern about pushing with my Github credentials were not an
 issue and all signs pointed to Mike have made the commit himself. You
 may be wondering why git even allows this to happen in the first place
