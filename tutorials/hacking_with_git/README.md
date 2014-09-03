@@ -17,6 +17,7 @@ repository's log with `git log`, you'll see the history of all the commits
 made up to that point. If you look at the output you'll see a output
 similar to: 
 ```
+$ git log
 commit cfd45281e21e09966c1e91317402bbbc2a25f816
 Author: Antoine Guerrero <asguerrero3@gmail.com>
 Date:   Thu Aug 28 21:31:47 2014 -0700
@@ -32,11 +33,10 @@ address to use? It uses the name and email address in your
     name = Antoine Guerrero
     email = asguerrero3@gmail.com
 ```
-. Since the user gets to
-set which email is in the file and no validation ever takes place, there
-is no way of telling if your name and email address are actually your
-name and email address. With this in mind, lets look at how I used this
-information to hack our grading system.
+Since the user gets to set which email is in the file and no validation
+ever takes place, there is no way of telling if your name and email address
+are actually your name and email address. With this in mind, we'll now take
+a look at how I used this information to hack our grading system.
 
 ## Changing My Grade
 After determining that there was no way git could tell if I was who my
@@ -46,10 +46,12 @@ yourself using your login information. I wasn't too sure what would
 happen if I pushed a commit using a different email than the one used
 for my GitHub credentials but I told Mike of my idea and with his
 permission I went and tried out my idea. The process of committing with
-Mike's credentials was straight forward. First I changed the grade in
-file and then added the file with `git add grade`. The commit was made
+Mike's credentials was straight forward. First I modified the grade file in
+vim and then added the file with `git add grade`. The commit was made
 with `git commit --author="Mike Izbicki <mike@izbicki.me>" -m "Change
-grade"`. My concern about pushing with my Github credentials were not an
+grade"`. By using the `--author="Mike Izbicki <mike@izbicki.me>"` flag I 
+was able to override the author that git would credit for the commit.
+My concern about pushing with my Github credentials were not an
 issue and all signs pointed to Mike have made the commit himself. You
 may be wondering why git even allows this to happen in the first place
 and the answer is simple. The person pushing new commits to a repository
